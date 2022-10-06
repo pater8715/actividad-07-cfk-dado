@@ -2,6 +2,7 @@ input.onButtonPressed(Button.AB, function () {
     a = 0
     b = 1
     contador = 0
+    basic.clearScreen()
 })
 // Función para leer los valores numéricos y representarlos en un dado.
 function show_value (núm: number) {
@@ -71,11 +72,11 @@ basic.forever(function () {
         basic.pause(5000)
         basic.showIcon(IconNames.Happy)
     }
-    if (input.buttonIsPressed(Button.B) && (b == 1 && contador < 10)) {
+    if (input.buttonIsPressed(Button.B) && (b == 1 && contador < 15)) {
         value_dice = randint(1, 6)
         show_value(value_dice)
         contador += 1
-    } else if (contador == 10) {
+    } else if (contador == 15) {
         basic.pause(5000)
         basic.showIcon(IconNames.Happy)
     }
